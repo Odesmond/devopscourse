@@ -5,8 +5,9 @@ pipeline {
         stage('Clone Terraform Repo') {
             steps {
                 echo 'Hello World'
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Odesmond/devopscourse.git']])
-        }}
+                git branch: 'main', url: 'https://github.com/Odesmond/devopscourse.git'
+            }
+        }
         stage('Terraform Provision') {
             steps {
                 sh """
