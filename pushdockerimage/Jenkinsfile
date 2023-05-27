@@ -20,7 +20,7 @@ pipeline {
 	    stage('Manual APPROVAL') {
             steps {
                 //sh 'docker build -t raj80dockerid/jenkinstest ./pushdockerimage/' (this will use the tag latest)
-		sh 'input : 'Docker login? (click "proceed" to continue) ./pushdockerimage/'
+		sh 'input : 'Docker login? (click "proceed" to continue)'
             }
         }
         stage('Docker Login') {
